@@ -49,7 +49,7 @@
     #define _GNU_SOURCE // Required for: ppoll if compiled with c99 without gnu ext.
 #endif
 
-#if defined(_WIN32) || defined(__CYGWIN__)
+#if defined(_WIN32) || defined(__CYGWIN__) || defined(__MSYS__)
     #define _GLFW_WIN32
 #endif
 #if defined(__linux__)
@@ -78,7 +78,7 @@
 #include "external/glfw/src/input.c"
 #include "external/glfw/src/vulkan.c"
 
-#if defined(_WIN32) || defined(__CYGWIN__)
+#if defined(_WIN32) || defined(__CYGWIN__) || defined(__MSYS__)
     #include "external/glfw/src/win32_init.c"
     #include "external/glfw/src/win32_module.c"
     #include "external/glfw/src/win32_monitor.c"
